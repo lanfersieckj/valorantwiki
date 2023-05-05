@@ -30,7 +30,7 @@ export default function Weapon() {
       }
     }
     getWeapon()
-  }, [weaponId])
+  }, [router, weaponId])
 
   if (pageError) {
     return (

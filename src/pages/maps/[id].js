@@ -31,7 +31,7 @@ export default function Map() {
       }
     }
     getMap()
-  }, [mapId])
+  }, [router, mapId])
 
   if (pageError) {
     return (
