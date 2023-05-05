@@ -40,8 +40,8 @@ const WelcomePage = () => {
         objectFit="cover"
       />
       <Text textAlign="center">
-        This is Brimstone from Valorant, and I'm here to welcome you to the
-        ultimate resource for all things Valorant. In this wiki, you'll find
+        This is Brimstone from Valorant, and I&apos;m here to welcome you to the
+        ultimate resource for all things Valorant. In this wiki, you&apos;ll find
         comprehensive information on weapons, maps, and agents to keep
         you prepared for any battle.
       </Text>
