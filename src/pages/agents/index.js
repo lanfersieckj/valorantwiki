@@ -1,14 +1,10 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import { useEffect, useState } from "react";
 import { FullPageDashError } from '@/components/error';
 import AgentsList from '@/components/agents/agentList';
 import { Heading, VStack } from '@chakra-ui/react';
-import WelcomePage from '@/components/welcome/welcomepage';
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+export default function Agents() {
 
   const [agents, setAgents] = useState([])
   const [pageError, setPageError] = useState(false)
@@ -36,11 +32,12 @@ export default function Home() {
     )
   }
 
-  //initial testing to see if data is being returned and can be displayed
-  //this wil turn into a welcome page and the agent list will be elsewhere
   return (
 
-   <WelcomePage/>
+    <VStack justifyContent={"center"}>
+      <Heading fontSize={"50px"}>Agent List</Heading>
+      <AgentsList agents={agents.agents}/> 
+    </VStack>
 
   )
 }

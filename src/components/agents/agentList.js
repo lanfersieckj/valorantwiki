@@ -1,13 +1,15 @@
 import { Wrap } from '@chakra-ui/react';
 import React from 'react';
-import AgentCard from './AgentCard';
+import Link from 'next/link';
+import AgentCard from './agentCard';
 
 const AgentsList = ({ agents }) => {
-    console.log("agentList: ", agents)
   return (
     <Wrap justify={"center"} spacing={"40px"}>
       {agents?.map((agent) => (
-        <AgentCard key={agent?.uuid} agent={agent} />
+        <Link key={agent.uuid} href={`/agents/${agent.uuid}`}>
+          <AgentCard agent={agent} />
+        </Link>
       ))}
     </Wrap>
   );
